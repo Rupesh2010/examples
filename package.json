@@ -5,7 +5,9 @@
   "scripts": {
     "lint": "eslint .",
     "docs": "node generate-readme.js",
-    "validate": "node validate.js"
+    "validate": "node validate.js",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "license": "MIT",
   "dependencies": {
@@ -13,7 +15,9 @@
     "eslint-config-airbnb-base": "^10.0.1",
     "eslint-plugin-import": "^2.16.0",
     "gray-matter": "^4.0.2",
-    "markdown-magic": "^0.1.25"
+    "markdown-magic": "^0.1.25",
+    "@snyk/protect": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "snyk": true
 }
