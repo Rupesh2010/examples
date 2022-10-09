@@ -7,7 +7,9 @@
     "test": "stage=dev IS_OFFLINE=true node_modules/.bin/mocha  --compilers js:babel-core/register  test/ --recursive  --timeout=60000",
     "lintonce": "node_modules/.bin/esw -f table --color --debug src",
     "dev": "serverless offline --compilers js:babel-core/register  --stage default",
-    "deploy": "SLS_DEBUG=* serverless deploy --verbose --stage stage"
+    "deploy": "SLS_DEBUG=* serverless deploy --verbose --stage stage",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "keywords": [
     "dropbox",
@@ -17,8 +19,9 @@
   "license": "ISC",
   "dependencies": {
     "btoa": "^1.2.1",
-    "request": "^2.87.0",
-    "serverless": "^1.27.3"
+    "request": "^2.88.0",
+    "serverless": "^1.82.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -40,5 +43,6 @@
     "serverless-offline": "^3.16.0",
     "serverless-plugin-optimize": "^3.0.3-rc.1",
     "tv4": "^1.3.0"
-  }
+  },
+  "snyk": true
 }
