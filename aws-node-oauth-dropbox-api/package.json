@@ -17,8 +17,8 @@
   "license": "ISC",
   "dependencies": {
     "btoa": "^1.2.1",
-    "request": "^2.87.0",
-    "serverless": "^1.27.3"
+    "request": "^2.88.2",
+    "serverless": "^4.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
